@@ -11,16 +11,8 @@ RUN apt-get install -y python3.10 python3-distutils python3-pip python3-apt
 
 WORKDIR /app
 
-COPY ./app ./app
-
-COPY ./requirements.txt requirements.txt
+COPY . /app
 
 RUN pip3 install -r requirements.txt
 
 EXPOSE 8080
-
-COPY ./start.sh start.sh
-
-COPY ./run.py run.py
-
-CMD ["./start.sh"]

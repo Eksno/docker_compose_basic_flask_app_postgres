@@ -12,7 +12,7 @@ def home():
 
 @app.route("/db")
 def db():
-    conn = psycopg2.connect(os.environ.get('DATABASE_URL', 'postgres://postgres:postgres@localhost:5432/postgres'))
+    conn = psycopg2.connect(os.environ.get('DATABASE_URL', 'postgres://postgres:postgres@db:5432/postgres'))
 
     cur = conn.cursor()
     
