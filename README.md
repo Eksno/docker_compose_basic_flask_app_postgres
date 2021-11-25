@@ -1,2 +1,2 @@
-# docker_basic_flask_app
- A basic flask app with docker utilities
+# docker_compose_basic_flask_app_postgres
+ A basic flask app that shows a postgres database on localhost:8080/db
