@@ -2,3 +2,4 @@ flask
 waitress
 black
 psycopg2-binary
+prometheus_client
