@@ -7,8 +7,9 @@ import logging
 import psycopg2
 
 
-view_metric = Counter('view', 'Endpoint View', ['endpoint'])
-load_duration_metric = Summary('load_duration', 'Time spent loading sql pages')
+view_metric = Counter("view", "Endpoint View", ["endpoint"])
+load_duration_metric = Summary("load_duration", "Time spent loading sql pages")
+
 
 @app.route("/")
 @app.route("/home")
@@ -120,6 +121,7 @@ def db_kepid(kepid):
     logging.debug("created json data")
 
     return jsonify(json_data)
+
 
 @app.route("/metrics")
 def metrics():
